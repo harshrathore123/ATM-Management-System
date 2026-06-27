@@ -39,8 +39,21 @@ html {
 
 body {
 	background: #071a36;
-	overflow-x: hidden;
+	
 	color: #fff;
+
+    min-height:100vh;
+
+    position:relative;
+
+    overflow-x:hidden;
+
+    overflow-y:auto;
+
+    padding-top:120px;
+
+    padding-bottom:40px;
+
 }
 
 /*=========================================
@@ -615,16 +628,8 @@ footer a:hover {
 
 				<ul class="navbar-nav ms-auto">
 
-					<li class="nav-item"><a class="nav-link active" href="/">Home</a>
+					<li class="nav-item"><a class="nav-link active" href="/ATM-SpringMVC-Project/">Home</a>
 					</li>
-
-					<li class="nav-item"><a class="nav-link" href="#">Services</a>
-					</li>
-
-					<li class="nav-item"><a class="nav-link" href="#">Security</a>
-					</li>
-
-					<li class="nav-item"><a class="nav-link" href="#">About</a></li>
 
 					<li class="nav-item ms-lg-3"><a href="login"
 						class="btn btn-outline-light rounded-pill px-4"> Login </a></li>

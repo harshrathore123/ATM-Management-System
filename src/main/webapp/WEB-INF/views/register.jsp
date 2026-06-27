@@ -38,18 +38,15 @@ body{
 
     min-height:100vh;
 
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
     position:relative;
 
     overflow-x:hidden;
+
     overflow-y:auto;
 
-    padding:40px 15px;
+    padding-top:110px;
+
+    padding-bottom:40px;
 
 }
 
@@ -102,6 +99,93 @@ body::after{
 	filter:blur(100px);
 
 	opacity:.18;
+
+}
+
+
+/*=========================
+        Navbar
+=========================*/
+
+.custom-navbar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:9999;
+
+    background:rgba(7,26,54,.80);
+
+    backdrop-filter:blur(18px);
+
+}
+
+.logo{
+
+    font-size:38px;
+
+    font-weight:700;
+
+    color:white !important;
+
+}
+
+.logo i{
+
+    color:#35d8ff;
+
+    margin-right:8px;
+
+}
+
+.navbar-nav .nav-link{
+
+    color:#d8ecff !important;
+
+    font-size:18px;
+
+    margin-left:28px;
+
+    transition:.3s;
+
+}
+
+.navbar-nav .nav-link:hover{
+
+    color:#35d8ff !important;
+
+}
+
+.btn-login{
+
+    margin-left:30px;
+
+    padding:10px 28px;
+
+    border-radius:40px;
+
+    border:1px solid #35d8ff;
+
+    color:white;
+
+    transition:.4s;
+
+}
+
+.btn-login:hover{
+
+    background:#00bfff;
+
+    color:white;
+
+    box-shadow:
+
+    0 0 18px #00bfff;
 
 }
 
@@ -929,9 +1013,17 @@ input:-webkit-autofill{
 
 body{
 
-    padding:30px 15px;
+    padding-top:95px;
+
+}
+
+.register-wrapper{
+
+    min-height:auto;
 
     align-items:flex-start;
+
+    padding:30px 15px;
 
 }
 
@@ -940,12 +1032,6 @@ body{
     width:100%;
 
     max-width:420px;
-
-    padding:75px 25px 35px;
-
-    margin-top:40px;
-
-    margin-bottom:40px;
 
 }
 
@@ -958,32 +1044,6 @@ body{
 .row-box .input-box{
 
     width:100%;
-
-}
-
-.register-title{
-
-    font-size:32px;
-
-}
-
-.profile-circle{
-
-    width:80px;
-
-    height:80px;
-
-}
-
-.profile-circle i{
-
-    font-size:32px;
-
-}
-
-.bar{
-
-    display:none;
 
 }
 
@@ -1035,11 +1095,68 @@ body{
 
 }
 
+/*==============================
+      Register Wrapper
+===============================*/
+
+.register-wrapper{
+
+    width:100%;
+
+    min-height:calc(100vh - 85px);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px 20px;
+
+    position:relative;
+
+    z-index:20;
+
+}
+
 </style>
 
 </head>
 
 <body>
+
+	<nav
+		class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+		<div class="container">
+
+			<a class="navbar-brand fw-bold logo" href="#"> <i
+				class="bi bi-bank2"></i> ApexBank
+			</a>
+
+			<button class="navbar-toggler" data-bs-toggle="collapse"
+				data-bs-target="#navbarNav">
+
+				<span class="navbar-toggler-icon"></span>
+
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarNav">
+
+				<ul class="navbar-nav ms-auto">
+
+					<li class="nav-item"><a class="nav-link active" href="/ATM-SpringMVC-Project/">Home</a>
+					</li>
+
+					<li class="nav-item ms-lg-3"><a href="login"
+						class="btn btn-login"> Login </a></li>
+
+				</ul>
+
+			</div>
+
+		</div>
+	</nav>
+
 
 <!-- Floating Particles -->
 
@@ -1063,7 +1180,7 @@ body{
 <div class="dot dot5"></div>
 
 <!-- Register Card -->
-
+<div class="register-wrapper">
 <div class="register-card">
 
     <!-- Security Badge -->
@@ -1214,6 +1331,7 @@ body{
 
     </form>
 
+</div>
 </div>
 </body>
 </html>

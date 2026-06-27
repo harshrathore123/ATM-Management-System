@@ -31,22 +31,112 @@
 
 body{
 
-	background:#071a36;
+	background: #071a36;
+	
+	color: #fff;
 
-	min-height:100vh;
+    min-height:100vh;
 
-	display:flex;
+    position:relative;
 
-	justify-content:center;
+    overflow-x:hidden;
 
-	align-items:center;
+    overflow-y:auto;
 
-	overflow:hidden;
+    padding-top:120px;
 
-	position:relative;
+    padding-bottom:40px;
 
 }
 
+
+/*=========================
+        Navbar
+=========================*/
+
+.custom-navbar{
+
+	background: rgba(7, 26, 54, .70);
+	
+	backdrop-filter: blur(20px);
+	
+	padding: 15px 0;
+	
+	transition: .4s;
+
+    height:85px;
+
+    border-bottom:1px solid rgba(0,200,255,.12);
+
+    box-shadow:
+
+    0 5px 25px rgba(0,0,0,.25);
+
+}
+
+.logo{
+
+    font-size:38px;
+
+    font-weight:700;
+
+    color:white !important;
+
+}
+
+.logo i{
+
+    color:#35d8ff;
+
+    margin-right:8px;
+
+}
+
+.navbar-nav .nav-link{
+
+    color:#d8ecff !important;
+
+    font-size:18px;
+
+    margin-left:28px;
+
+    transition:.3s;
+
+}
+
+.navbar-nav .nav-link:hover{
+
+    color:#35d8ff !important;
+
+}
+
+.btn-login{
+
+    margin-left:30px;
+
+    padding:10px 28px;
+
+    border-radius:40px;
+
+    border:1px solid #35d8ff;
+
+    color:white;
+
+    transition:.4s;
+
+}
+
+.btn-login:hover{
+
+    background:#00bfff;
+
+    color:white;
+
+    box-shadow:
+
+    0 0 18px #00bfff;
+
+}
 /*============================
       Background
 =============================*/
@@ -860,10 +950,61 @@ body::before{
     letter-spacing:1px;
 
 }
+
+.login-wrapper{
+
+    width:100%;
+
+    min-height:calc(100vh - 120px);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    z-index:10;
+
+}
 </style>
 </head>
 
 <body>
+
+	<nav
+		class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+		<div class="container">
+
+			<a class="navbar-brand fw-bold logo" href="#"> <i
+				class="bi bi-bank2"></i> ApexBank
+			</a>
+
+			<button class="navbar-toggler" data-bs-toggle="collapse"
+				data-bs-target="#navbarNav">
+
+				<span class="navbar-toggler-icon"></span>
+
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarNav">
+
+				<ul class="navbar-nav ms-auto">
+
+					<li class="nav-item"><a class="nav-link active" href="/ATM-SpringMVC-Project/">Home</a>
+					</li>
+
+					<li class="nav-item ms-lg-3"><a href="login"
+						class="btn btn-login"> Login </a></li>
+
+				</ul>
+
+			</div>
+
+		</div>
+	</nav>
+
 
 <div class="particle p1"></div>
 <div class="particle p2"></div>
@@ -882,6 +1023,8 @@ body::before{
 <div class="dot dot5"></div>
 
 <!-- Login Card -->
+
+<div class="login-wrapper">
 
 <div class="login-card">
 
@@ -971,5 +1114,6 @@ body::before{
     </form>
 
 </div>
-</head>
+</div>
+</body>
 </html>

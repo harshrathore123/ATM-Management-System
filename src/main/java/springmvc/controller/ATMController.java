@@ -23,4 +23,10 @@ public class ATMController {
 		System.out.println("Login Page");
 		return "register";
 	}
+	
+	@RequestMapping("/logout")
+	public String logout() {
+		System.out.println("Logout Page");
+		return "logout";
+	}
 }
