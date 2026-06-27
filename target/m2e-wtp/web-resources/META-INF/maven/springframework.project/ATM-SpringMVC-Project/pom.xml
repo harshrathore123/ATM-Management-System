@@ -1,0 +1,84 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>springframework.project</groupId>
+	<artifactId>ATM-SpringMVC-Project</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>ATM-SpringMVC-Project Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Adding Dependencies of Spring Core -->
+		<!-- Source:
+		https://mvnrepository.com/artifact/org.springframework/spring-core -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>5.2.23.RELEASE</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- Adding Dependencies of Spring MVC -->
+		<!-- Source:
+		https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>5.2.23.RELEASE</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- Adding Dependencies of Spring ORM -->
+		<!-- Source:
+		https://mvnrepository.com/artifact/org.springframework/spring-orm -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>5.2.23.RELEASE</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- Adding Dependencies of Hibernate -->
+		<!-- Source:
+		https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>7.2.3.Final</version>
+			<type>pom</type>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- Adding Dependencies of MysqlConnector -->
+		<!-- Source:
+		https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
+		<dependency>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+			<version>9.3.0</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- Adding Dependencies of JSTL Expression Language of JSP -->
+		<!-- Source: https://mvnrepository.com/artifact/javax.servlet/jstl -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+			<scope>compile</scope>
+		</dependency>
+
+
+	</dependencies>
+	<build>
+		<finalName>ATM-SpringMVC-Project</finalName>
+	</build>
+</project>
