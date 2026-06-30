@@ -614,7 +614,7 @@ footer a:hover {
 		<div class="container">
 
 			<a class="navbar-brand fw-bold logo" href="#"> <i
-				class="bi bi-bank2"></i> ApexBank
+				class="bi bi-bank2"></i> HDFC Bank
 			</a>
 
 			<button class="navbar-toggler" data-bs-toggle="collapse"
