@@ -46,6 +46,56 @@ body {
 }
 
 /*=========================
+        Navbar
+=========================*/
+.custom-navbar {
+	background: rgba(7, 26, 54, .70);
+	backdrop-filter: blur(20px);
+	padding: 15px 0;
+	transition: .4s;
+	height: 85px;
+	border-bottom: 1px solid rgba(0, 200, 255, .12);
+	box-shadow: 0 5px 25px rgba(0, 0, 0, .25);
+}
+
+.logo {
+	font-size: 38px;
+	font-weight: 700;
+	color: white !important;
+}
+
+.logo i {
+	color: #35d8ff;
+	margin-right: 8px;
+}
+
+.navbar-nav .nav-link {
+	color: #d8ecff !important;
+	font-size: 18px;
+	margin-left: 28px;
+	transition: .3s;
+}
+
+.navbar-nav .nav-link:hover {
+	color: #35d8ff !important;
+}
+
+.btn-login {
+	margin-left: 30px;
+	padding: 10px 28px;
+	border-radius: 40px;
+	border: 1px solid #35d8ff;
+	color: white;
+	transition: .4s;
+}
+
+.btn-login:hover {
+	background: #00bfff;
+	color: white;
+	box-shadow: 0 0 18px #00bfff;
+}
+
+/*=========================
       Background Glow
 =========================*/
 .circle {
@@ -121,9 +171,13 @@ keyframes float { 0%{
 
 
 
+
+
 %
 {
 transform
+
+
 
 
 
@@ -137,12 +191,18 @@ transform
 
 
 
+
+
 translateY
 
 
 
 
+
+
 (
+
+
 
 
 
@@ -156,7 +216,11 @@ translateY
 
 
 
+
+
 )
+
+
 
 
 
@@ -164,6 +228,8 @@ translateY
 ;
 }
 100
+
+
 
 
 
@@ -179,7 +245,11 @@ transform
 
 
 
+
+
 :
+
+
 
 
 
@@ -191,7 +261,11 @@ translateY
 
 
 
+
+
 (
+
+
 
 
 
@@ -205,7 +279,11 @@ translateY
 
 
 
+
+
 )
+
+
 
 
 
@@ -253,7 +331,7 @@ translateY
       Main Section
 =========================*/
 .pin-section {
-	padding: 50px 0 80px;
+	padding: 140px 0 80px;
 }
 
 /*=========================
@@ -471,6 +549,26 @@ translateY
 	background: #bb2d3b;
 	transform: translateY(-4px);
 }
+
+/* Mobile Navbar */
+@media ( max-width : 991px) {
+	.navbar-collapse {
+		background: rgba(7, 26, 54, .95);
+		backdrop-filter: blur(18px);
+		-webkit-backdrop-filter: blur(18px);
+		padding: 20px;
+		border-radius: 15px;
+		margin-top: 15px;
+	}
+	.navbar-nav .nav-item {
+		margin: 10px 0;
+	}
+	.btn-login {
+		margin-left: 0;
+		margin-top: 10px;
+		display: inline-block;
+	}
+}
 </style>
 
 </head>
@@ -481,18 +579,18 @@ translateY
         Navbar
 ===========================-->
 
-	<nav class="navbar navbar-expand-lg custom-navbar">
-
+	<nav
+		class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
 		<div class="container">
 
-			<a class="navbar-brand logo" href="#"> <i class="bi bi-bank2"></i>
-
-				ApexBank
-
+			<a class="navbar-brand fw-bold logo" href="#"> <i
+				class="bi bi-bank2"></i> HDBC Bank
 			</a>
 
 			<button class="navbar-toggler" type="button"
-				data-bs-toggle="collapse" data-bs-target="#navbarNav">
+				data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false"
+				aria-label="Toggle navigation">
 
 				<span class="navbar-toggler-icon"></span>
 
@@ -502,24 +600,14 @@ translateY
 
 				<ul class="navbar-nav ms-auto">
 
-					<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-
-					<li class="nav-item"><a class="nav-link" href="#">Services</a>
-
-					</li>
-
-					<li class="nav-item"><a class="nav-link active" href="#">Security</a>
-
-					</li>
-
-					<li class="nav-item"><a class="nav-link" href="#">About</a></li>
+					<li class="nav-item ms-lg-3"><a class="btn btn-login"
+						href="/ATM-SpringMVC-Project/">Back to Home -></a></li>
 
 				</ul>
 
 			</div>
 
 		</div>
-
 	</nav>
 
 	<!--==========================
