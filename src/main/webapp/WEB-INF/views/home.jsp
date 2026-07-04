@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>ApexBank | ATM Management System</title>
+<title>HDFC Bank | ATM Management System</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -39,21 +39,12 @@ html {
 
 body {
 	background: #071a36;
-	
 	color: #fff;
-
-    min-height:100vh;
-
-    position:relative;
-
-    overflow-x:hidden;
-
-    overflow-y:auto;
-
-    padding-top:120px;
-
-    padding-bottom:40px;
-
+	min-height: 100vh;
+	position: relative;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding-bottom: 40px;
 }
 
 /*=========================================
@@ -85,53 +76,6 @@ body::after {
 	filter: blur(180px);
 	opacity: .20;
 	z-index: -2;
-}
-
-/*=========================================
-    Navbar
-=========================================*/
-.custom-navbar {
-	background: rgba(7, 26, 54, .70);
-	backdrop-filter: blur(20px);
-	padding: 15px 0;
-	transition: .4s;
-}
-
-.logo {
-	font-size: 28px;
-	font-weight: 700;
-	color: #fff !important;
-}
-
-.logo i {
-	color: #4fd7ff;
-	margin-right: 8px;
-}
-
-.navbar-nav .nav-link {
-	color: #d5d5d5;
-	margin-left: 20px;
-	transition: .3s;
-	position: relative;
-}
-
-.navbar-nav .nav-link:hover {
-	color: #4fd7ff;
-}
-
-.navbar-nav .nav-link::after {
-	content: '';
-	position: absolute;
-	width: 0;
-	height: 2px;
-	background: #4fd7ff;
-	left: 0;
-	bottom: -4px;
-	transition: .3s;
-}
-
-.navbar-nav .nav-link:hover::after {
-	width: 100%;
 }
 
 /*=========================================
@@ -226,22 +170,102 @@ keyframes floatImage { 0%{
 }
 
 50
+
+
+
+
+
+
 %
 {
 transform
+
+
+
+
+
+
 :
-translateY(
+
+
+
+
+
+
+translateY
+
+
+
+
+(
+
+
+
+
+
+
 -18px
-);
+
+
+
+
+
+
+)
+
+
+
+
+;
 }
 100
+
+
+
+
+
+
 %
 {
 transform
+
+
+
+
+
+
 :
-translateY(
+
+
+
+
+
+
+translateY
+
+
+
+
+(
+
+
+
+
+
+
 0px
-);
+
+
+
+
+
+
+)
+
+
+
+
+;
 }
 }
 
@@ -292,22 +316,102 @@ keyframes floatingCard { 0%{
 }
 
 50
+
+
+
+
+
+
 %
 {
 transform
+
+
+
+
+
+
 :
-translateY(
+
+
+
+
+
+
+translateY
+
+
+
+
+(
+
+
+
+
+
+
 -12px
-);
+
+
+
+
+
+
+)
+
+
+
+
+;
 }
 100
+
+
+
+
+
+
 %
 {
 transform
+
+
+
+
+
+
 :
-translateY(
+
+
+
+
+
+
+translateY
+
+
+
+
+(
+
+
+
+
+
+
 0px
-);
+
+
+
+
+
+
+)
+
+
+
+
+;
 }
 }
 
@@ -602,44 +706,41 @@ footer a:hover {
 ::-webkit-scrollbar-thumb:hover {
 	background: #00d0ff;
 }
+
+.btn-login {
+	margin-left: 30px;
+	padding: 10px 28px;
+	border-radius: 40px;
+	border: 1px solid #35d8ff;
+	color: white !important;
+	background: transparent;
+	transition: .4s;
+}
+
+.btn-login:hover {
+	background: #00bfff;
+	color: white !important;
+	box-shadow: 0 0 18px #00bfff;
+}
+
+/*=========================================
+        Cash Withdrawl
+=========================================*/
+.feature-link {
+	text-decoration: none;
+	color: inherit;
+	display: block;
+}
+
+.feature-link:hover {
+	color: inherit;
+}
 </style>
 
 </head>
 
 <body>
 
-
-	<nav
-		class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
-		<div class="container">
-
-			<a class="navbar-brand fw-bold logo" href="#"> <i
-				class="bi bi-bank2"></i> HDFC Bank
-			</a>
-
-			<button class="navbar-toggler" data-bs-toggle="collapse"
-				data-bs-target="#navbarNav">
-
-				<span class="navbar-toggler-icon"></span>
-
-			</button>
-
-			<div class="collapse navbar-collapse" id="navbarNav">
-
-				<ul class="navbar-nav ms-auto">
-
-					<li class="nav-item"><a class="nav-link active" href="/ATM-SpringMVC-Project/">Home</a>
-					</li>
-
-					<li class="nav-item ms-lg-3"><a href="login"
-						class="btn btn-outline-light rounded-pill px-4"> Login </a></li>
-
-				</ul>
-
-			</div>
-
-		</div>
-	</nav>
 
 	<!-- ================= HERO ================= -->
 
@@ -653,7 +754,7 @@ footer a:hover {
 
 				<div class="col-lg-6">
 
-					<span class="welcome"> Welcome To ApexBank </span>
+					<span class="welcome"> Welcome To HDFC Bank </span>
 
 					<h1 class="display-4 fw-bold mt-3">
 
@@ -667,11 +768,11 @@ footer a:hover {
 
 					<div class="mt-5">
 
-						<a href="login" class="btn btn-primary btn-lg custom-btn me-3"> <i
-							class="bi bi-box-arrow-in-right"></i> Login
+						<a href="login" class="btn btn-primary btn-lg custom-btn me-3">
+							<i class="bi bi-box-arrow-in-right"></i> Login
 
-						</a> <a href="register" class="btn btn-light btn-lg register-btn"> <i
-							class="bi bi-person-plus"></i> Register
+						</a> <a href="register" class="btn btn-light btn-lg register-btn">
+							<i class="bi bi-person-plus"></i> Register
 
 						</a>
 
@@ -683,11 +784,15 @@ footer a:hover {
 
 						<div class="col-6">
 
-							<div class="feature-box">
+							<a href="withdrawmoney" class="feature-link">
 
-								<i class="bi bi-cash-stack"></i> <span>Cash Withdrawal</span>
+								<div class="feature-box">
 
-							</div>
+									<i class="bi bi-cash-stack"></i> <span>Cash Withdrawal</span>
+
+								</div>
+
+							</a>
 
 						</div>
 
@@ -782,16 +887,17 @@ footer a:hover {
 
 				<div class="col-md-4">
 
-					<div class="service-card">
+					<a href="withdrawmoney" class="feature-link">
+						<div class="service-card">
 
-						<i class="bi bi-cash-coin"></i>
+							<i class="bi bi-cash-coin"></i>
 
-						<h4>Cash Withdrawal</h4>
+							<h4>Cash Withdrawal</h4>
 
-						<p>Withdraw money securely from your account.</p>
+							<p>Withdraw money securely from your account.</p>
 
-					</div>
-
+						</div>
+					</a>
 				</div>
 
 				<div class="col-md-4">

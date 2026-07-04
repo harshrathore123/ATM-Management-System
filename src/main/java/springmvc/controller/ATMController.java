@@ -11,22 +11,34 @@ public class ATMController {
 		System.out.println("Home URL");
 		return "home";
 	}
-	
+
 	@RequestMapping("/login")
 	public String login() {
 		System.out.println("Login Page");
 		return "login";
 	}
-	
+
 	@RequestMapping("/register")
 	public String register() {
 		System.out.println("Login Page");
 		return "register";
 	}
-	
+
 	@RequestMapping("/logout")
 	public String logout() {
 		System.out.println("Logout Page");
 		return "logout";
+	}
+
+	@RequestMapping("/withdrawmoney")
+	public String cashWithdraw() {
+		System.out.println("Cash Withdrawl");
+		return "withdrawmoney";
+	}
+
+	@RequestMapping("/atmpinverify")
+	public String atmpinVerification() {
+		System.out.println("Going on ATM PIN Verification...");
+		return "atmPinVerification";
 	}
 }
