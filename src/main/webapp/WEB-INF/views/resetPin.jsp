@@ -494,7 +494,6 @@ label i {
 		display: inline-block;
 	}
 }
-
 .back-dashboard-link {
 	color: #35d8ff;
 	text-decoration: none;
@@ -574,14 +573,13 @@ label i {
 		<div class="container">
 
 			<div class="page-icon">
-
-				<i class="bi bi-key-fill"></i>
-
+				<i class="bi bi-arrow-clockwise"></i>
 			</div>
 
-			<h1 class="verify-title">CHANGE ATM PIN</h1>
+			<h1 class="verify-title">RESET ATM PIN</h1>
 
-			<p class="verify-subtitle">Create a new secure 4-digit ATM PIN</p>
+			<p class="verify-subtitle">Verify your account before creating a
+				new PIN</p>
 			<!--=========================
                 Verify Card
         ==========================-->
@@ -592,75 +590,72 @@ label i {
 					<div class="verify-card">
 
 						<div class="card-icon">
-
-							<i class="bi bi-shield-lock-fill"></i>
-
+							<i class="bi bi-person-check-fill"></i>
 						</div>
 
-						<h3 class="card-title">Set New PIN</h3>
+						<h3 class="card-title">Account Verification</h3>
 
-						<p class="card-text">Enter your new 4-digit ATM PIN below.</p>
+						<p class="card-text">Enter your registered details.</p>
 
-						<form action="login" method="post">
+						<form action="resetPinVerification" method="post">
 
-							<!-- New PIN -->
+							<!-- Account Number -->
 
-							<div class="mb-4">
+							<div class="mb-4 text-start">
 
-								<label class="form-label"> <i class="bi bi-lock-fill"></i>
+								<label class="form-label"> <i
+									class="bi bi-person-vcard-fill"></i> Account Number
 
-									New ATM PIN
-
-								</label> <input type="password" class="form-control"
-									placeholder="Enter New PIN">
-
-							</div>
-
-							<!-- Confirm PIN -->
-
-							<div class="mb-4">
-
-								<label class="form-label"> <i class="bi bi-lock-fill"></i>
-
-									Confirm ATM PIN
-
-								</label> <input type="password" class="form-control"
-									placeholder="Confirm New PIN">
+								</label> <input type="text" class="form-control"
+									placeholder="Enter Account Number">
 
 							</div>
 
-							<button class="verify-btn w-100">
+							<!-- Mobile -->
 
-								<i class="bi bi-arrow-repeat"></i> Change PIN
+							<div class="mb-4 text-start">
 
-							</button>
+								<label class="form-label"> <i class="bi bi-phone-fill"></i>
 
+									Registered Mobile Number
+
+								</label> <input type="text" class="form-control"
+									placeholder="Enter Registered Mobile Number">
+
+							</div>
+
+							<!-- DOB -->
+
+							<div class="mb-4 text-start">
+
+								<label class="form-label"> <i
+									class="bi bi-calendar-date-fill"></i> Date of Birth
+
+								</label> <input type="date" class="form-control">
+
+							</div>
+
+							<a href="changePin"
+								class="verify-btn w-100 d-flex justify-content-center align-items-center text-decoration-none">
+
+								<i class="bi bi-shield-check me-2"></i> Verify Account
+
+							</a>
+							
 							<!-- Back to Dashboard -->
 							<div class="text-center mt-4">
 								<a href="dashboard" class="back-dashboard-link"> <i
 									class="bi bi-arrow-left"></i> Back to Dashboard
 								</a>
-							</div>
+							</div>							
 
 						</form>
-
 						<div class="security-box">
 
-							<i class="bi bi-info-circle-fill"></i>
-
-							<ul class="mb-0">
-
-								<li>PIN must be exactly 4 digits.</li>
-
-								<li>Do not use easy numbers like 1234.</li>
-
-								<li>Never share your ATM PIN.</li>
-
-							</ul>
+							<i class="bi bi-info-circle-fill"></i> Please enter the details
+							exactly as registered with the bank.
 
 						</div>
-
-
 					</div>
 				</div>
 			</div>

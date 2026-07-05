@@ -1002,12 +1002,14 @@ footer a:hover {
 
 				<ul class="navbar-nav ms-auto">
 
-					<a href="/ATM-SpringMVC-Project/" class="btn btn-logout">
-						<i class="bi bi-box-arrow-right"></i>
-						Logout
-					</a>
+    <li class="nav-item">
+        <a href="/ATM-SpringMVC-Project/" class="btn btn-logout">
+            <i class="bi bi-box-arrow-right"></i>
+            Logout
+        </a>
+    </li>
 
-				</ul>
+</ul>
 
 			</div>
 
@@ -1058,10 +1060,10 @@ footer a:hover {
 
 						<div class="col-6">
 
-							<a href="login" class="feature-link">
+							<a href="resetPin" class="feature-link">
 								<div class="feature-box">
-									<i class="bi bi-arrow-left-right"></i> <span>Card
-										Service</span>
+									<i class="bi bi-arrow-left-right"></i> <span>Reset
+										PIN</span>
 								</div>
 							</a>
 						</div>
@@ -1078,10 +1080,9 @@ footer a:hover {
 						</div>
 
 						<div class="col-6">
-							<a href="login" class="feature-link">
+							<a href="verifyPin" class="feature-link">
 								<div class="feature-box">
-									<i class="bi bi-arrow-left-right"></i> <span>Secure
-										Banking</span>
+									<i class="bi bi-arrow-left-right"></i> <span>Pin Verification</span>
 								</div>
 							</a>
 

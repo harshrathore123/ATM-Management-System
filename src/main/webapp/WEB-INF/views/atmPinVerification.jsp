@@ -173,9 +173,13 @@ keyframes float { 0%{
 
 
 
+
+
 %
 {
 transform
+
+
 
 
 
@@ -193,6 +197,8 @@ transform
 
 
 
+
+
 translateY
 
 
@@ -200,7 +206,11 @@ translateY
 
 
 
+
+
 (
+
+
 
 
 
@@ -218,7 +228,11 @@ translateY
 
 
 
+
+
 )
+
+
 
 
 
@@ -228,6 +242,8 @@ translateY
 ;
 }
 100
+
+
 
 
 
@@ -247,7 +263,11 @@ transform
 
 
 
+
+
 :
+
+
 
 
 
@@ -263,7 +283,11 @@ translateY
 
 
 
+
+
 (
+
+
 
 
 
@@ -281,7 +305,11 @@ translateY
 
 
 
+
+
 )
+
+
 
 
 
@@ -569,6 +597,24 @@ translateY
 		display: inline-block;
 	}
 }
+
+.change-pin-link {
+	color: #35d8ff;
+	text-decoration: none;
+	font-size: 15px;
+	font-weight: 500;
+	transition: .3s;
+}
+
+.change-pin-link i {
+	margin-right: 6px;
+}
+
+.change-pin-link:hover {
+	color: #ffffff;
+	text-shadow: 0 0 10px #35d8ff;
+	text-decoration: underline;
+}
 </style>
 
 </head>
@@ -650,7 +696,7 @@ translateY
 
 						<p>Please enter your 4-digit ATM PIN</p>
 
-						<form action="verifyPin" method="post">
+						<form action="dashboard" method="get">
 
 							<div class="pin-boxes">
 
@@ -743,6 +789,14 @@ translateY
 								<i class="bi bi-shield-check"></i> Verify PIN
 
 							</button>
+
+							<div class="text-center mt-3">
+
+								<a href="verifyPin" class="change-pin-link"> <i
+									class="bi bi-key-fill"></i> Change ATM PIN?
+								</a>
+
+							</div>
 
 						</form>
 

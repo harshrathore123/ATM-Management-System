@@ -29,7 +29,7 @@ public class ATMController {
 		System.out.println("Logout Page");
 		return "logout";
 	}
-	
+
 	@RequestMapping("/dashboard")
 	public String dashboard() {
 		System.out.println("Going Login -> Dashboard");
@@ -47,10 +47,22 @@ public class ATMController {
 		System.out.println("Going on ATM PIN Verification...");
 		return "atmPinVerification";
 	}
-	
+
 	@RequestMapping("/verifyPin")
 	public String verifyAtmPin() {
 		System.out.println("Going to Verify the ATM Pin");
 		return "verifyPin";
+	}
+
+	@RequestMapping("/changePin")
+	public String changeAtmPin() {
+		System.out.println("Going to Change ATM PIN");
+		return "changePin";
+	}
+
+	@RequestMapping("/resetPin")
+	public String resetAtmPin() {
+		System.out.println("Going to Reset ATM PIN");
+		return "resetPin";
 	}
 }
