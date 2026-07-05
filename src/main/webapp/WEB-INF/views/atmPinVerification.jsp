@@ -601,7 +601,7 @@ translateY
 				<ul class="navbar-nav ms-auto">
 
 					<li class="nav-item ms-lg-3"><a class="btn btn-login"
-						href="/ATM-SpringMVC-Project/">Back to Home -></a></li>
+						href="/ATM-SpringMVC-Project/">Home</a></li>
 
 				</ul>
 

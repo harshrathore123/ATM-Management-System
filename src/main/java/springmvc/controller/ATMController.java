@@ -29,6 +29,12 @@ public class ATMController {
 		System.out.println("Logout Page");
 		return "logout";
 	}
+	
+	@RequestMapping("/dashboard")
+	public String dashboard() {
+		System.out.println("Going Login -> Dashboard");
+		return "DashBoard";
+	}
 
 	@RequestMapping("/withdrawmoney")
 	public String cashWithdraw() {
@@ -40,5 +46,11 @@ public class ATMController {
 	public String atmpinVerification() {
 		System.out.println("Going on ATM PIN Verification...");
 		return "atmPinVerification";
+	}
+	
+	@RequestMapping("/verifyPin")
+	public String verifyAtmPin() {
+		System.out.println("Going to Verify the ATM Pin");
+		return "verifyPin";
 	}
 }

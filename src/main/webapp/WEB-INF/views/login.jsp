@@ -8,7 +8,7 @@
 
 <meta charset="UTF-8">
 
-<title>ApexBank Login</title>
+<title>HDFC Bank Login</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -817,7 +817,7 @@ opacity
 
 			<!-- Login Form -->
 
-			<form action="loginUser" method="post">
+			<form action="dashboard" method="post">
 
 				<!-- Username -->
 

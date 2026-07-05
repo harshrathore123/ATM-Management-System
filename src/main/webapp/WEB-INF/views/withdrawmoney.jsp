@@ -253,16 +253,18 @@ translateY
 /*==========================
       Glass Card
 ===========================*/
-.withdraw-card {
-	position: relative;
-	padding: 70px 50px;
-	border-radius: 30px;
-	background: rgba(255, 255, 255, .08);
-	backdrop-filter: blur(18px);
-	border: 1px solid rgba(255, 255, 255, .12);
-	box-shadow: 0 15px 40px rgba(0, 0, 0, .35), 0 0 40px
-		rgba(0, 191, 255, .12);
-	overflow: hidden;
+.withdraw-card{
+    position: relative;
+    width:490px;
+    margin:auto;
+    padding:55px 30px 30px;
+    border-radius:25px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.12);
+    box-shadow:0 15px 40px rgba(0,0,0,.35),
+               0 0 40px rgba(0,191,255,.12);
+    overflow:hidden;
 }
 
 .withdraw-card::before {
@@ -277,39 +279,27 @@ translateY
 /*==========================
         Icon
 ===========================*/
-.top-icon {
-	width: 100px;
-	height: 100px;
-	margin: auto;
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background: #0c315f;
-	border: 2px solid #35d8ff;
-	box-shadow: 0 0 30px #35d8ff;
-	margin-bottom: 30px;
+.top-icon{
+    width:75px;
+    height:75px;
+    margin-bottom:20px;
 }
 
-.top-icon i {
-	font-size: 46px;
-	color: #35d8ff;
+.top-icon i{
+    font-size:34px;
 }
 
 /*==========================
       Heading
 ===========================*/
-.withdraw-card h1 {
-	font-size: 42px;
-	font-weight: 700;
-	text-align: center;
-	margin-bottom: 10px;
+.withdraw-card h1{
+    font-size:28px;
+    margin-bottom:8px;
 }
 
-.withdraw-card p {
-	text-align: center;
-	color: #d7e8ff;
-	margin-bottom: 20px;
+.withdraw-card p{
+    font-size:15px;
+    margin-bottom:15px;
 }
 
 /*==========================
@@ -317,12 +307,12 @@ translateY
 ===========================*/
 .amount-btn {
 	width: 100%;
-	height: 70px;
-	border-radius: 20px;
+	height: 52px;
+	border-radius: 14px;
 	border: 2px solid rgba(53, 216, 255, .35);
 	background: rgba(255, 255, 255, .06);
 	color: white;
-	font-size: 22px;
+	font-size: 18px;
 	font-weight: 600;
 	transition: .35s;
 }
@@ -348,12 +338,12 @@ label {
 }
 
 .form-control {
-	height: 65px;
+	height: 54px;
 	border-radius: 45px;
 	background: rgba(255, 255, 255, .08);
 	border: 2px solid rgba(53, 216, 255, .25);
 	color: white;
-	font-size: 20px;
+	font-size: 18px;
 	padding-left: 25px;
 }
 
@@ -373,12 +363,12 @@ label {
 ===========================*/
 .withdraw-btn {
 	width: 100%;
-	height: 68px;
+	height: 56px;
 	border: none;
 	border-radius: 45px;
 	background: linear-gradient(90deg, #00bfff, #0066ff);
 	color: white;
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: 600;
 	transition: .35s;
 	box-shadow: 0 15px 35px rgba(0, 140, 255, .35);
@@ -467,13 +457,6 @@ label {
 
 					<li class="nav-item ms-lg-3"><a class="btn btn-login"
 						href="/ATM-SpringMVC-Project/">Home</a></li>
-
-					<li class="nav-item ms-lg-3"><a href="register"
-						class="btn btn-login"> Register </a></li>
-
-					<li class="nav-item ms-lg-3"><a href="login"
-						class="btn btn-login"> Login </a></li>
-
 				</ul>
 
 			</div>
@@ -507,7 +490,7 @@ label {
 
 			<div class="row justify-content-center">
 
-				<div class="col-lg-7">
+				<div class="col-lg-5 col-md-6">
 
 					<div class="withdraw-card">
 
@@ -525,9 +508,9 @@ label {
         Form
 ======================-->
 
-						<form action="withdrawMoney" method="post">
+						<form action="atmpinverify" method="post">
 
-							<div class="row g-4 mt-4">
+							<div class="row g-3 mt-3">
 
 								<div class="col-4">
 
@@ -579,14 +562,14 @@ label {
 
 							</div>
 
-							<div class="mt-5">
+							<div class="mt-4">
 
 								<label> Custom Amount </label> <input type="number" id="amount"
 									name="amount" class="form-control" placeholder="Enter Amount">
 
 							</div>
 
-							<div class="mt-5">
+							<div class="mt-4">
 
 								<button class="withdraw-btn" type="submit">
 

@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>HDFC Bank | ATM Management System</title>
+<title>HDFC Bank | DashBoard | ATM Management System</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -77,6 +77,56 @@ body::after {
 	filter: blur(180px);
 	opacity: .20;
 	z-index: -2;
+}
+
+/*=========================
+        Navbar
+=========================*/
+.custom-navbar {
+	background: rgba(7, 26, 54, .70);
+	backdrop-filter: blur(20px);
+	padding: 15px 0;
+	transition: .4s;
+	height: 85px;
+	border-bottom: 1px solid rgba(0, 200, 255, .12);
+	box-shadow: 0 5px 25px rgba(0, 0, 0, .25);
+}
+
+.logo {
+	font-size: 38px;
+	font-weight: 700;
+	color: white !important;
+}
+
+.logo i {
+	color: #35d8ff;
+	margin-right: 8px;
+}
+
+.navbar-nav .nav-link {
+	color: #d8ecff !important;
+	font-size: 18px;
+	margin-left: 28px;
+	transition: .3s;
+}
+
+.navbar-nav .nav-link:hover {
+	color: #35d8ff !important;
+}
+
+.btn-logout {
+	margin-left: 30px;
+	padding: 10px 28px;
+	border-radius: 40px;
+	border: 1px solid #35d8ff;
+	color: white;
+	transition: .4s;
+}
+
+.btn-logout:hover {
+	background: #00bfff;
+	color: white;
+	box-shadow: 0 0 18px #00bfff;
 }
 
 /*=========================================
@@ -904,11 +954,66 @@ footer a:hover {
 .feature-link:hover {
 	color: inherit;
 }
+
+/* Mobile Navbar */
+@media ( max-width : 991px) {
+	.navbar-collapse {
+		background: rgba(7, 26, 54, .95);
+		backdrop-filter: blur(18px);
+		-webkit-backdrop-filter: blur(18px);
+		padding: 20px;
+		border-radius: 15px;
+		margin-top: 15px;
+	}
+	.navbar-nav .nav-item {
+		margin: 10px 0;
+	}
+	.btn-logout {
+		margin-left: 0;
+		margin-top: 10px;
+		display: inline-block;
+	}
+}
 </style>
 
 </head>
 
 <body>
+
+	<!-- ================== Navbar ======================== -->
+	<nav
+		class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+		<div class="container">
+
+			<a class="navbar-brand fw-bold logo" href="dashboard"> <i
+				class="bi bi-bank2"></i> HDBC Bank
+			</a>
+
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false"
+				aria-label="Toggle navigation">
+
+				<span class="navbar-toggler-icon"></span>
+
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarNav">
+
+				<ul class="navbar-nav ms-auto">
+
+					<a href="/ATM-SpringMVC-Project/" class="btn btn-logout">
+						<i class="bi bi-box-arrow-right"></i>
+						Logout
+					</a>
+
+				</ul>
+
+			</div>
+
+		</div>
+	</nav>
+	
 
 
 	<!-- ================= HERO ================= -->
@@ -935,25 +1040,13 @@ footer a:hover {
 						our modern ATM Management System powered by Spring MVC, Spring ORM
 						and MySQL.</p>
 
-					<div class="mt-5">
-
-						<a href="login" class="btn btn-primary btn-lg custom-btn me-3">
-							<i class="bi bi-box-arrow-in-right"></i> Login
-
-						</a> <a href="register" class="btn btn-light btn-lg register-btn">
-							<i class="bi bi-person-plus"></i> Register
-
-						</a>
-
-					</div>
-
 					<!-- FEATURES -->
 
 					<div class="row mt-5 g-4">
 
 						<div class="col-6">
 
-							<a href="login" class="feature-link">
+							<a href="withdrawmoney" class="feature-link">
 								<div class="feature-box">
 									<i class="bi bi-cash-stack"></i> <span>Cash Withdrawal</span>
 
@@ -1020,7 +1113,7 @@ footer a:hover {
 								<i class="bi bi-wallet2"></i> Fast Banking
 
 							</div>
-						</a> <a href="login" class="feature-link">
+						</a> <a href="withdrawmoney" class="feature-link">
 							<div class="floating-card card3">
 
 								<i class="bi bi-currency-rupee"></i> Cash Deposit
