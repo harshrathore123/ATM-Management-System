@@ -910,7 +910,7 @@ input:-webkit-autofill {
 
 				<div class="input-box">
 
-					<input type="password" name="password" placeholder="Password"
+					<input type="text" name="password" placeholder="Account Number"
 						required> <i class="bi bi-lock-fill"></i>
 
 				</div>
@@ -920,7 +920,7 @@ input:-webkit-autofill {
 				<div class="input-box">
 
 					<input type="password" name="confirmPassword"
-						placeholder="Confirm Password" required> <i
+						placeholder="Account PIN" required> <i
 						class="bi bi-shield-lock-fill"></i>
 
 				</div>
