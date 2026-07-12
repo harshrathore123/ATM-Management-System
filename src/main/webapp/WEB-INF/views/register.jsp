@@ -1,7 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1" %>
 
+<%@ page isELIgnored="false" %>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 
@@ -171,27 +173,105 @@ keyframes float { 0%{
 50
 
 
+
+
+
+
+
+
+
+
+
+
 %
 {
 transform
 
 
+
+
+
+
+
+
+
+
+
+
 :
 
 
+
+
+
+
+
+
+
+
+
+
 translateY
+
+
+
+
+
+
+
+
+
+
 (
+
+
+
+
+
+
+
+
+
+
 
 
 -18px
 
 
+
+
+
+
+
+
+
+
+
+
 )
+
+
+
+
+
+
+
+
+
+
 ;
-
-
 }
 100
+
+
+
+
+
+
+
+
+
+
 
 
 %
@@ -199,20 +279,78 @@ translateY
 transform
 
 
+
+
+
+
+
+
+
+
+
+
 :
 
 
+
+
+
+
+
+
+
+
+
+
 translateY
+
+
+
+
+
+
+
+
+
+
 (
+
+
+
+
+
+
+
+
+
+
 
 
 0px
 
 
+
+
+
+
+
+
+
+
+
+
 )
+
+
+
+
+
+
+
+
+
+
 ;
-
-
 }
 }
 
@@ -553,37 +691,143 @@ keyframes particleMove { 0%{
 50
 
 
+
+
+
+
+
+
+
+
+
+
 %
 {
 transform
 
 
+
+
+
+
+
+
+
+
+
+
 :
 
 
+
+
+
+
+
+
+
+
+
+
 translateY
+
+
+
+
+
+
+
+
+
+
 (
+
+
+
+
+
+
+
+
+
+
 
 
 -25px
 
 
+
+
+
+
+
+
+
+
+
+
 )
+
+
+
+
+
+
+
+
+
+
 ;
-
-
 opacity
+
+
+
+
+
+
+
+
+
+
 
 
 :
 
 
+
+
+
+
+
+
+
+
+
+
 1
+
+
+
+
+
+
+
+
+
+
 ;
-
-
 }
 100
+
+
+
+
+
+
+
+
+
+
 
 
 %
@@ -591,30 +835,116 @@ opacity
 transform
 
 
+
+
+
+
+
+
+
+
+
+
 :
 
 
+
+
+
+
+
+
+
+
+
+
 translateY
+
+
+
+
+
+
+
+
+
+
 (
+
+
+
+
+
+
+
+
+
+
 
 
 0
 
 
+
+
+
+
+
+
+
+
+
+
 )
+
+
+
+
+
+
+
+
+
+
 ;
-
-
 opacity
+
+
+
+
+
+
+
+
+
+
 
 
 :
 
 
+
+
+
+
+
+
+
+
+
+
 .4
+
+
+
+
+
+
+
+
+
+
 ;
-
-
 }
 }
 
@@ -911,8 +1241,9 @@ input:-webkit-autofill {
 
 				<div class="input-box">
 
-					<input type="text" name="accountnumber" placeholder="Account Number"
-						required> <i class="bi bi-lock-fill"></i>
+					<input type="text" name="accountnumber"
+						placeholder="Account Number" required> <i
+						class="bi bi-lock-fill"></i>
 
 				</div>
 
@@ -920,9 +1251,8 @@ input:-webkit-autofill {
 
 				<div class="input-box">
 
-					<input type="password" name="accountpin"
-						placeholder="Account PIN" required> <i
-						class="bi bi-shield-lock-fill"></i>
+					<input type="password" name="accountpin" placeholder="Account PIN"
+						required> <i class="bi bi-shield-lock-fill"></i>
 
 				</div>
 
@@ -952,5 +1282,20 @@ input:-webkit-autofill {
 	</div>
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+	<c:if test="${not empty error}">
+		<script>
+		Swal.fire({
+			toast : true,
+			position : 'top-end',
+			icon : 'error',
+			title : '${error}',
+			showConfirmButton : false,
+			timer : 3000,
+			timerProgressBar : true
+		});
+</script>
+	</c:if>
 </body>
 </html>

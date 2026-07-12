@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1" %>
 
+<%@ page isELIgnored="false" %>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 
@@ -172,9 +175,13 @@ keyframes float { 0%{
 
 
 
+
+
 %
 {
 transform
+
+
 
 
 
@@ -184,10 +191,16 @@ transform
 
 
 
+
+
 translateY
 
 
+
+
 (
+
+
 
 
 
@@ -197,12 +210,18 @@ translateY
 
 
 
+
+
 )
+
+
 
 
 ;
 }
 100
+
+
 
 
 
@@ -214,7 +233,11 @@ transform
 
 
 
+
+
 :
+
+
 
 
 
@@ -222,7 +245,11 @@ transform
 translateY
 
 
+
+
 (
+
+
 
 
 
@@ -232,7 +259,11 @@ translateY
 
 
 
+
+
 )
+
+
 
 
 ;
@@ -543,9 +574,13 @@ keyframes particleMove { 0%{
 
 
 
+
+
 %
 {
 transform
+
+
 
 
 
@@ -555,10 +590,16 @@ transform
 
 
 
+
+
 translateY
 
 
+
+
 (
+
+
 
 
 
@@ -568,11 +609,17 @@ translateY
 
 
 
+
+
 )
+
+
 
 
 ;
 opacity
+
+
 
 
 
@@ -582,12 +629,18 @@ opacity
 
 
 
+
+
 1
+
+
 
 
 ;
 }
 100
+
+
 
 
 
@@ -599,7 +652,11 @@ transform
 
 
 
+
+
 :
+
+
 
 
 
@@ -607,7 +664,11 @@ transform
 translateY
 
 
+
+
 (
+
+
 
 
 
@@ -617,11 +678,17 @@ translateY
 
 
 
+
+
 )
+
+
 
 
 ;
 opacity
+
+
 
 
 
@@ -631,7 +698,11 @@ opacity
 
 
 
+
+
 .4
+
+
 
 
 ;
@@ -868,6 +939,21 @@ opacity
 	</div>
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+	<c:if test="${not empty success}">
+		<script>
+			Swal.fire({
+				toast : true,
+				position : 'top-end',
+				icon : 'success',
+				title : '${success}',
+				showConfirmButton : false,
+				timer : 3000,
+				timerProgressBar : true
+			});
+		</script>
+	</c:if>
 </body>
 
 </html>

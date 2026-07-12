@@ -1,7 +1,5 @@
 package springmvc.model;
 
-import org.springframework.stereotype.Repository;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,7 +7,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Repository
 @Entity
 @Table(name="register")
 public class Register {
@@ -18,22 +15,22 @@ public class Register {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	
-	@Column(name="Holder_FirstName")
+	@Column(name="Holder_FirstName",nullable = false)
 	private String firstName;
 	
-	@Column(name="Holder_LastName")
+	@Column(name="Holder_LastName", nullable = false)
 	private String lastName;
 	
-	@Column(name="Holder_Email")
+	@Column(name="Holder_Email", nullable = false, unique = true)
 	private String email;
 	
-	@Column(name="Holder_Mobile")
+	@Column(name="Holder_Mobile", nullable = false, unique = true)
 	private long mobile;
 	
-	@Column(name="Holder_AccountNumber")
+	@Column(name="Holder_AccountNumber", nullable = false, unique = true)
 	private String accountnumber;
 	
-	@Column(name="Holder_AccountPin")
+	@Column(name="Holder_AccountPin", nullable = false, unique = true)
 	private long accountpin;
 	
 	public String getFirstName() {

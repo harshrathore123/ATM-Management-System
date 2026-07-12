@@ -17,7 +17,7 @@
 https://www.springframework.org/schema/mvc/spring-mvc.xsd">
 	
 	<!-- Enabling Transaciton Annotation -->
-	<tx:annotation-driven/>
+	<tx:annotation-driven transaction-manager="transactionManager"/>
 
 	<!-- <mvc:resources mapping="/resources/**" location="/resources/" /> -->
 	<context:component-scan base-package="springmvc" />
@@ -60,11 +60,13 @@ https://www.springframework.org/schema/mvc/spring-mvc.xsd">
 	</bean>
 
 	<!-- Hibernate Template Object -->
+	 
 	<bean class="org.springframework.orm.hibernate5.HibernateTemplate"
 		name="hibernateTemplate">
 		<property name="sessionFactory" ref="factory" />
 	</bean>
-
+	 
+	 
 	<!-- Registration Dao -->
 	<!-- We can not create this object because it is autowired -->
 
