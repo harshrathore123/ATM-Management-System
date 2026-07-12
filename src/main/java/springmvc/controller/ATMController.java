@@ -18,12 +18,6 @@ public class ATMController {
 		return "login";
 	}
 
-	@RequestMapping("/register")
-	public String register() {
-		System.out.println("Login Page");
-		return "register";
-	}
-
 	@RequestMapping("/logout")
 	public String logout() {
 		System.out.println("Logout Page");

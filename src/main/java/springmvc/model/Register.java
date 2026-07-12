@@ -2,15 +2,19 @@ package springmvc.model;
 
 import org.springframework.stereotype.Repository;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Table;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Repository
+@Entity
 @Table(name="register")
 public class Register {
 	
+	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	
