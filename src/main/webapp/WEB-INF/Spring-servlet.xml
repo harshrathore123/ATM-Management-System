@@ -18,22 +18,20 @@ https://www.springframework.org/schema/mvc/spring-mvc.xsd">
 	
 	<!-- Enabling Transaciton Annotation -->
 	<tx:annotation-driven transaction-manager="transactionManager"/>
+	<mvc:annotation-driven />
 
 	<!-- <mvc:resources mapping="/resources/**" location="/resources/" /> -->
 	<context:component-scan base-package="springmvc" />
 
 	<!-- Process For Connecting Spring ORM + Hibernate -->
-	<!-- Data Source Driver Manager Data Sources -->
+	<!-- Default to H2 for local runtime; switch to MySQL by editing properties below when needed -->
 	<bean
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource"
 		name="ds">
-		<property name="driverClassName"
-			value="com.mysql.jdbc.Driver" />
-		<property name="url"
-			value="jdbc:mysql://localhost:3306/atm_management_system" />
-		<property name="username" value="root" />
-		<property name="password" value="harsh@aA1234" />
-
+		<property name="driverClassName" value="org.h2.Driver" />
+		<property name="url" value="jdbc:h2:mem:atmdb;DB_CLOSE_DELAY=-1;MODE=MySQL;DB_CLOSE_ON_EXIT=FALSE" />
+		<property name="username" value="sa" />
+		<property name="password" value="" />
 	</bean>
 
 	<!-- LocalSessionFactory instead of Session Factory -->
@@ -44,12 +42,12 @@ https://www.springframework.org/schema/mvc/spring-mvc.xsd">
 		<property name="hibernateProperties">
 			<props>
 				<prop key="hibernate.dialect">
-					org.hibernate.dialect.MySQL8Dialect
+					org.hibernate.dialect.H2Dialect
 				</prop>
 
 				<prop key="hibernate.show_sql">true</prop>
-
 				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.format_sql">true</prop>
 			</props>
 		</property>
 		<property name="annotatedClasses">

@@ -80,6 +80,29 @@ public class RegisterDao {
 		});
 	}
 
+	@Transactional(readOnly = true)
+	public Register getByEmail(String email) {
+		return hibernateTemplate.execute(session -> {
+			Query<Register> query = session.createQuery("from Register where email = :email", Register.class);
+			query.setParameter("email", email);
+			List<Register> users = query.getResultList();
+			return users.isEmpty() ? null : users.get(0);
+		});
+	}
+
+	@Transactional(readOnly = true)
+	public Register getByEmailAndPin(String email, long accountPin) {
+		return hibernateTemplate.execute(session -> {
+			Query<Register> query = session.createQuery(
+					"from Register where email = :email and accountpin = :accountpin",
+					Register.class);
+			query.setParameter("email", email);
+			query.setParameter("accountpin", accountPin);
+			List<Register> users = query.getResultList();
+			return users.isEmpty() ? null : users.get(0);
+		});
+	}
+
 	public int save(Register register) {
 //		Session session = sessionFactory.getCurrentSession();
 //		return (Integer) session.save(register);
