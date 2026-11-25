@@ -888,13 +888,13 @@ opacity
 
 			<!-- Login Form -->
 
-			<form action="dashboard" method="post">
+			<form action="loginUser" method="post">
 
 				<!-- Username -->
 
 				<div class="input-box">
 
-					<input type="text" name="username" placeholder="Enter Username"
+					<input type="email" name="username" placeholder="Enter Email Address"
 						required> <i class="bi bi-person-fill"></i>
 
 				</div>
@@ -903,7 +903,7 @@ opacity
 
 				<div class="input-box">
 
-					<input type="password" name="password" placeholder="Enter Password"
+					<input type="password" name="password" placeholder="Enter Account PIN"
 						required> <i class="bi bi-lock-fill"></i>
 
 				</div>
@@ -948,6 +948,19 @@ opacity
 				position : 'top-end',
 				icon : 'success',
 				title : '${success}',
+				showConfirmButton : false,
+				timer : 3000,
+				timerProgressBar : true
+			});
+		</script>
+	</c:if>
+	<c:if test="${not empty error}">
+		<script>
+			Swal.fire({
+				toast : true,
+				position : 'top-end',
+				icon : 'error',
+				title : '${error}',
 				showConfirmButton : false,
 				timer : 3000,
 				timerProgressBar : true

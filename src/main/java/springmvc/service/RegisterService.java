@@ -29,4 +29,12 @@ public class RegisterService {
 	public int create(Register register) {
 		return this.registerDao.save(register);
 	}
+
+	public Register login(String email, long accountPin) {
+		return this.registerDao.getByEmailAndPin(email, accountPin);
+	}
+
+	public Register findByEmail(String email) {
+		return this.registerDao.getByEmail(email);
+	}
 }

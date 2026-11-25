@@ -66,6 +66,14 @@
 			<scope>compile</scope>
 		</dependency>
 
+		<!-- Servlet API required for Spring MVC controllers and HttpSession usage -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>4.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+
 		<!-- Adding Dependencies of JSTL Expression Language of JSP -->
 		<!-- Source: https://mvnrepository.com/artifact/javax.servlet/jstl -->
 		<dependency>
@@ -75,6 +83,13 @@
 			<scope>compile</scope>
 		</dependency>
 
+		<!-- In-memory database for local development/tests without external MySQL -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>2.2.220</version>
+			<scope>runtime</scope>
+		</dependency>
 
 	</dependencies>
 	<build>
